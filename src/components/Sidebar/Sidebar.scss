@@ -1,0 +1,141 @@
+.sidebar {
+  .side-menu-button {
+    display: none;
+  }
+  grid-area: sidebar;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  background-color: var(--main-color);
+  box-shadow: 0px -1px 5px #00000050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 10px 0;
+  z-index: 10;
+  transition: all ease-in-out 0.4s;
+
+  .logo-container {
+    position: relative;
+    width: 75%;
+    height: 40px;
+    margin: 0 auto;
+    background-image: url("../../assets/svgs/logo-light.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .logout-container {
+    width: 100%;
+    height: 40px;
+
+    i {
+      color: var(--main-color);
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .side-nav-container {
+    height: calc(100% - 120px);
+    width: 100%;
+    margin: 20px 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+[dir="ltr"] {
+  .sidebar {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    &.side-open {
+      right: 0;
+      .side-menu-button {
+        right: 200px;
+      }
+    }
+    &.side-close {
+      right: -200px;
+      .side-menu-button {
+        right: 0;
+      }
+    }
+    .side-menu-button {
+      position: fixed;
+      top: 15%;
+      width: 35px;
+      height: 35px;
+      background-color: var(--main-color);
+      border: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      cursor: pointer;
+      transition: all ease-in-out 0.4s;
+      z-index: 100;
+
+      &:hover {
+        background-color: var(--second-color);
+        color: var(--main-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  [dir="ltr"] {
+    .sidebar {
+      &.side-open {
+        left: 0;
+
+        .side-menu-button {
+          left: 200px;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+          i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &.side-close {
+        left: -200px;
+
+        .side-menu-button {
+          left: 0;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+          i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

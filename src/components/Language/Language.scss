@@ -1,0 +1,27 @@
+.language-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    width: auto;
+    height: 40px;
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: 14px;
+    border: none;
+    outline: none;
+    margin: 10px auto !important;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    img {
+        width: 25px !important;
+        height: 25px !important;
+        object-fit: contain;
+    }
+}
+
+[dir="ltr"] .language-button {
+    flex-direction: row;
+}

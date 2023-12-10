@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cairo-Bold";
+  src: local("Cairo-Bold"),
+    url(../src/assets/fonts/Cairo-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cairo-Medium";
+  src: local("Cairo-Medium"),
+    url(../src/assets/fonts/Cairo-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cairo-Regular";
+  src: local("Cairo-Regular"),
+    url(../src/assets/fonts/Cairo-Regular.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-regular);
+}
+
+:root {
+  --font-bold: "Cairo-Bold", sans-serif;
+  --font-medium: "Cairo-Medium", sans-serif;
+  --font-regular: "Cairo-Regular", sans-serif;
+  --main-color: #12131c;
+  --second-color: #8b8b8b;
+  --main-text: #272d3b;
+  --second-text: #5a5a5a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a7a7a7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #858585;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+.view-only {
+  background-image: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0.7 !important;
+  cursor: default !important;
+}
+
+.required {
+  color: #ae0000;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.all {
+  color: #141414;
+}
+
+.draft {
+  color: #acacac;
+}
+
+.submitted {
+  color: #fad8c4;
+}
+
+.hold {
+  color: #fff8a0;
+}
+
+.reviewing {
+  color: #c4d5fa;
+}
+
+.done {
+  color: #b6eebd;
+}
+
+.bg-all {
+  background-color: #141414;
+  color: #fff;
+}
+
+.bg-draft {
+  background-color: #acacac;
+  color: var(--main-color);
+}
+
+.bg-submitted {
+  background-color: #fad8c4;
+  color: var(--main-color);
+}
+
+.bg-hold {
+  background-color: #fff8a0;
+  color: var(--main-color);
+}
+
+.bg-reviewing {
+  background-color: #c4d5fa;
+  color: var(--main-color);
+}
+
+.bg-done {
+  background-color: #b6eebd;
+  color: var(--main-color);
+}
+
+.view {
+  color: #4a7cff;
+}
+
+.edit {
+  color: #4caf50;
+}
+
+.delete {
+  color: #e86767;
+}
+
+.active {
+  color: #b6eebd;
+}
+
+.inactive {
+  color: #e99797;
+}
+
+.react-datepicker__tab-loop {
+  z-index: 100;
+}
+
+.date-picker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-picker i {
+  position: absolute;
+  color: var(--second-color);
+  font-size: 16px;
+  right: 10px;
+  pointer-events: none;
+}
+
+[dir="ltr"] .date-picker i {
+  right: auto;
+  left: 10px;
+}
+
+.react-datepicker-wrapper {
+  width: 250px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+}
+
+@media (max-width: 992px) {
+  .date-picker {
+    width: 100%;
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+}
+
+[dir="ltr"] .react-datepicker-wrapper {
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+.react-datepicker-wrapper input {
+  width: 190px;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+  padding: 0 10px;
+}
+
+.react-datepicker-wrapper input::placeholder {
+  color: var(--second-color);
+}
+
+[dir="rtl"] .react-datepicker__close-icon {
+  right: auto;
+  left: 7px;
+}
+
+.react-datepicker__close-icon::after {
+  background-color: var(--second-color);
+  content: "X";
+  font-size: 6px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .title-component {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+[dir="rtl"] .apexcharts-legend * {
+  font-family: var(--font-regular) !important;
+}
+
+.apexcharts-legend-marker {
+  border-radius: 3px !important;
+}
+

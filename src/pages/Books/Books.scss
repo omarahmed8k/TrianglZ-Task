@@ -1,0 +1,120 @@
+.modal-container {
+    width: 800px;
+    text-align: start;
+}
+
+.modal-container {
+    &.w-400 {
+        width: 400px;
+    }
+    &.w-600 {
+        width: 600px;
+    }
+}
+
+.modal-info {
+    .modal-info-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        i {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-family: var(--font-bold);
+        }
+    }
+
+    .modal-info-body {
+        margin-bottom: 10px;
+
+        p {
+            position: relative;
+            font-size: 14px;
+            line-height: 2;
+            padding: 0px 15px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 0px;
+                width: 7.5px;
+                height: 7.5px;
+                border-radius: 50%;
+                background-color: #c4d5fa;
+
+                [dir="rtl"] & {
+                    left: unset;
+                    right: 0px;
+                }
+            }
+        }
+    }
+
+    .modal-info-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        padding: 0px 15px;
+
+        &.p-0 {
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            gap: 25px;
+            padding: 0;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        button {
+            width: 70%;
+            font-size: 14px;
+
+            &:nth-child(2) {
+                width: 30%;
+            }
+
+            &.cancel-btn {
+                text-decoration: underline;
+                color: #e86767;
+            }
+        }
+    }
+
+    &.request-type {
+        .modal-info-body {
+            margin-bottom: 10px;
+
+            p {
+                padding: 0;
+                margin-bottom: 20px;
+                &::before {
+                    content: unset;
+                }
+            }
+        }
+        button {
+            width: 50%;
+            font-size: 14px;
+
+            &:nth-child(2) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.react-daterange-picker__calendar{
+    z-index: 100;
+}

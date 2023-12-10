@@ -1,0 +1,26 @@
+.err-message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .err-message {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font: {
+      size: 14px;
+      // family: "Noto Sans Arabic", sans-serif;
+      weight: bold;
+    }
+    .err-text {
+      color: #842029;
+    }
+    margin: 20px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+.main-text-area-label {
+  width: 100%;
+  margin: 20px 0;
+  .main-text-area {
+    white-space: pre-line;
+    height: 150px;
+    width: 100%;
+    background-color: #f7f7f7;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0;
+    font-size: 14px;
+
+    @media (max-width: 992px) {
+      background-color: #ffffff;
+      border: 1px solid #0000001a;
+      box-shadow: 0px 0px 5px 0px #0000001a;
+    }
+  }
+
+  .text-area-label {
+    display: block;
+    color: var(--second-color);
+    background-color: transparent;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
