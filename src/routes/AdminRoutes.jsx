@@ -9,7 +9,7 @@ export default function AdminRoutes() {
         <Routes>
             <Route path="/" element={<Navigate replace to="/books" />} />
             <Route path="/*" element={<Navigate replace to="/books" />} />
-            <Route path="/create-book" element={<CreateBook />} />
+            <Route path="/books/create" element={<CreateBook />} />
             <Route path="/books" element={<Books />} />
             <Route path="/books/:id" element={<ReadBook />} />
             <Route path="/books/:id/edit" element={<EditBook />} />

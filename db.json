@@ -3,5 +3,18 @@
     "username": "Omar",
     "password": "asdasd"
   },
-  "books": []
+  "books": [
+    {
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "categories": ["fiction", "fantasy"],
+      "price": 12.99,
+      "version": "1.0.0",
+      "olderVersions": ["0.0.1", "0.0.2"],
+      "edtion": 1,
+      "isbn": "978-0-395-19395-2",
+      "releaseDate": "1954-07-29T00:00:00.000Z",
+      "brief": "The Lord of the Rings is an epic high-fantasy novel written by English author and scholar J. R. R. Tolkien."
+    }
+  ]
 }
