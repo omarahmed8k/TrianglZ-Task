@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import noDataIcon from "../../assets/svgs/no-data.svg";
+import noDataIcon from "../../assets/images/no-data.png";
 import "./NoData.scss";
 
 // no data component to show when there is no data to show

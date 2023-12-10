@@ -3,8 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { userTypes } from "../../helpers/constants";
 import Language from '../Language/Language';
-import NotificationIcon from '../NotificationIcon/NotificationIcon.jsx';
-import avatar from '../../assets/svgs/avatar.svg';
+import avatar from '../../assets/images/profile.png';
 import './HeaderInfo.scss';
 
 // header info component shows the user name, user type, user photo and language
@@ -16,7 +15,6 @@ export default function HeaderInfo() {
 
     return (
         <div className="header-container">
-            <NotificationIcon />
             <Link className="header-info" to={"/profile"} >
                 <img src={userPhoto} alt="userImage" loading="lazy" />
                 <p>

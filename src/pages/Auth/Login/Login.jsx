@@ -7,6 +7,7 @@ import sweetAlert from "../../../helpers/sweetAlert";
 import authServices from "../../../services/authServices";
 import LoadingSpinner from "../../../components/LoadingSpinner/LoadingSpinner";
 import MainInput from "../../../components/MainInput/MainInput";
+import logo from "../../../assets/images/logo.png";
 import "./Login.scss";
 
 function Login() {
@@ -17,15 +18,23 @@ function Login() {
 
   const loginForm = [
     { label: t("username"), type: "text", name: "username", placeholder: t("username"), register: register("username", { required: true }) },
-    { label: t("password"), type: "password", name: "password", placeholder: t("password"), register: register("password", { required: true, minLength: 6, checkPassword: true }) },
+    { label: t("password"), type: "password", name: "password", placeholder: t("password"), register: register("password", { required: true, minLength: 6, checkPassword: true, }) },
   ]
 
   const handleLogin = (data) => {
     setLoading(true);
     authServices.login(data).then((response) => {
-      dispatch(authActions.login(response.data));
+      dispatch(authActions.login(
+        {
+          access: true,
+          username: response.data.username,
+        }
+      ));
       console.log(response.data);
-    }).catch((error) => console.log(error))
+    }).catch((error) => {
+      console.log(error)
+      sweetAlert.error(t("error"));
+    })
     setLoading(false);
   }
 
@@ -33,19 +42,7 @@ function Login() {
     <div className="login-page">
       {loading ? <LoadingSpinner /> : null}
       <div className="login-form-container">
-        <div className="login-image">
-          <div className="login-image-info">
-            <h1>
-              {t("systemTitle")}
-            </h1>
-            <h3>
-              {t("systemSubTitle")}
-            </h3>
-            <p>
-              {t("systemDescription")}
-            </p>
-          </div>
-        </div>
+        <div className="login-image"></div>
         <div className="login-form">
           <div className="login-info">
             <p className="login-title">{t("login")}</p>
@@ -64,10 +61,12 @@ function Login() {
                   />
                 ))}
               </div>
+              <p className="forgot-password">{t("forgotPassword")}</p>
               <div className="login-buttons">
                 <input type="submit" className="main-button" value={t("login")} />
               </div>
             </form>
+            <img src={logo} alt="logo" className="login-logo" />
           </div>
         </div>
       </div >

@@ -37,13 +37,10 @@
       padding: 20px;
       background-color: #fff;
       overflow: auto;
-
-      @media (min-width: 1400px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       @media (max-width: 992px) {
         padding: 0px;
@@ -64,6 +61,7 @@
           width: 100%;
           height: 50px;
           object-fit: contain;
+          margin-top: 20px;
         }
 
         .login-inputs {
@@ -73,7 +71,7 @@
         .login-title {
           font-size: 22px;
           font-family: var(--font-bold);
-          color: #c4d5fa;
+          color: var(--main-color);
           text-align: center;
           margin-top: 30px;
           margin-bottom: 20px;
@@ -84,32 +82,16 @@
           font-family: var(--font-medium);
           color: var(--main-text);
           text-align: center;
-          margin-bottom: 20px;
+          margin-bottom: 35px;
         }
 
-        .forgot-password-text {
-          display: block;
+        .forgot-password {
           font-size: 14px;
           font-family: var(--font-medium);
           color: var(--main-text);
-          text-align: start;
-
-          &.text-center {
-            text-align: center;
-          }
-
-          span {
-            color: #999999;
-          }
-        }
-
-        .register-text {
-          text-align: center;
-          margin-top: 20px;
-        }
-
-        button {
-          margin-top: 10px;
+          text-align: start ;
+          margin-bottom: 35px;
+          cursor: pointer;
         }
       }
     }
@@ -118,7 +100,7 @@
       position: relative;
       width: 50%;
       height: 100%;
-      background-image: url("./../../../assets/images/login.png");
+      background-image: url("./../../../assets/images/login-bg.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
